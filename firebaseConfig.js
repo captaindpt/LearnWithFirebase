@@ -11,20 +11,27 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.5.2/firebase
 // appId: Application ID for the Firebase app, it is unique to this application
 
 // STEP 1: Declare Firebase Environment Variables  
+
+// Import the functions you need from the SDKs you need
+// import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "YOUR-OWN-VARIABLE",
-    authDomain: "YOUR-OWN-VARIABLE",
-    projectId: "YOUR-OWN-VARIABLE",
-    storageBucket: "YOUR-OWN-VARIABLE",
-    messagingSenderId: "YOUR-OWN-VARIABLE",
-    appId: "YOUR-OWN-VARIABLE",
+  apiKey: "AIzaSyDGxYyT2UXzh28CN3UnEG2L6X9hOEBES7o",
+  authDomain: "learnfirebase-60922.firebaseapp.com",
+  projectId: "learnfirebase-60922",
+  storageBucket: "learnfirebase-60922.appspot.com",
+  messagingSenderId: "498341277997",
+  appId: "1:498341277997:web:cd630e485b62a1aaeba3a4",
+  measurementId: "G-GCCRDVRCBB"
 };
 
-// initialze firebase in our project by passing in our environment variables to the `initializeApp` method
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// initialze firebase authentication by passing in firebase `app` instance we delared on the line above
 export const auth = getAuth(app);
-
-// initialze firestore by passing in firebase `app` instance we delared
+// const analytics = getAnalytics(app);
 export const db = getFirestore(app);
